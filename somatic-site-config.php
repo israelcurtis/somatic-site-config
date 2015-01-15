@@ -10,11 +10,11 @@
  *
  * @link              http://somaticstudios.com
  * @since             1.0
- * @package           somatic-framework-setup
+ * @package           somatic-site-config
  *
  * @wordpress-plugin
- * Plugin Name:       Somatic Framework Setup
- * Plugin URI:        https://github.com/israelcurtis/somatic-framework-setup
+ * Plugin Name:       Somatic Site Config
+ * Plugin URI:        https://github.com/israelcurtis/somatic-site-config
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress dashboard.
  * Version:           1.0
  * Author:            Israel Curtis

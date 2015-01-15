@@ -1,4 +1,4 @@
-=== Somatic Framework Setup ===
+=== Somatic Site Config ===
 
 Contributors: somatic
 Tags: CMS, custom post type, metabox, custom taxonomy
