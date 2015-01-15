@@ -1,4 +1,5 @@
 === Somatic Framework Setup ===
+
 Contributors: somatic
 Tags: CMS, custom post type, metabox, custom taxonomy
 Requires at least: 4.0
