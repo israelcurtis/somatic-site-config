@@ -9,14 +9,14 @@
  * that starts the plugin.
  *
  * @link              http://somaticstudios.com
- * @since             0.1
+ * @since             1.0
  * @package           somatic-framework-setup
  *
  * @wordpress-plugin
  * Plugin Name:       Somatic Framework Setup
  * Plugin URI:        https://github.com/israelcurtis/somatic-framework-setup
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress dashboard.
- * Version:           0.1
+ * Version:           1.0
  * Author:            Israel Curtis
  * Author URI:        http://somaticstudios.com
  * License:           GPL-2.0+

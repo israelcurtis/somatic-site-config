@@ -4,7 +4,7 @@ Contributors: somatic
 Tags: CMS, custom post type, metabox, custom taxonomy
 Requires at least: 4.0
 Tested up to: 4.1
-Stable tag: 0.1
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,5 +32,5 @@ An answer to that question.
 
 == Changelog ==
 
-= 0.1 =
+= 1.0 =
 * First Attempt
