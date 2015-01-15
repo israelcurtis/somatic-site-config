@@ -21,7 +21,7 @@
  * Author URI:        http://somaticstudios.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       somatic-framework-setup
+ * Text Domain:       somatic-site-config
  * Domain Path:       /languages
  */
 
@@ -32,30 +32,30 @@ if ( ! defined( 'WPINC' ) ) {
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-soma-setup-activator.php
+ * This action is documented in includes/class-soma-config-activator.php
  */
-function activate_soma_setup() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-soma-setup-activator.php';
-	Soma_Setup_Activator::activate();
+function activate_soma_config() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-soma-config-activator.php';
+	Soma_Config_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-soma-setup-deactivator.php
+ * This action is documented in includes/class-soma-config-deactivator.php
  */
-function deactivate_soma_setup() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-soma-setup-deactivator.php';
-	Soma_Setup_Deactivator::deactivate();
+function deactivate_soma_config() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-soma-config-deactivator.php';
+	Soma_Config_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_soma_setup' );
-register_deactivation_hook( __FILE__, 'deactivate_soma_setup' );
+register_activation_hook( __FILE__, 'activate_soma_config' );
+register_deactivation_hook( __FILE__, 'deactivate_soma_config' );
 
 /**
  * The core plugin class that is used to define internationalization,
  * dashboard-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-soma-setup.php';
+require plugin_dir_path( __FILE__ ) . 'includes/class-soma-config.php';
 
 /**
  * Begins execution of the plugin.
@@ -66,10 +66,10 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-soma-setup.php';
  *
  * @since    1.0.0
  */
-function run_soma_setup() {
+function run_soma_config() {
 
-	$plugin = new Soma_Setup();
+	$plugin = new Soma_Config();
 	$plugin->run();
 
 }
-run_soma_setup();
+run_soma_config();

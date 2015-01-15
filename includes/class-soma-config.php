@@ -9,8 +9,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Soma_Setup
- * @subpackage Soma_Setup/includes
+ * @package    Soma_Config
+ * @subpackage Soma_Config/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Soma_Setup
- * @subpackage Soma_Setup/includes
+ * @package    Soma_Config
+ * @subpackage Soma_Config/includes
  * @author     Your Name <email@example.com>
  */
-class Soma_Setup {
+class Soma_Config {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -35,7 +35,7 @@ class Soma_Setup {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Soma_Setup_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Soma_Config_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -83,10 +83,10 @@ class Soma_Setup {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Soma_Setup_Loader. Orchestrates the hooks of the plugin.
-	 * - Soma_Setup_i18n. Defines internationalization functionality.
-	 * - Soma_Setup_Admin. Defines all hooks for the dashboard.
-	 * - Soma_Setup_Public. Defines all hooks for the public side of the site.
+	 * - Soma_Config_Loader. Orchestrates the hooks of the plugin.
+	 * - Soma_Config_i18n. Defines internationalization functionality.
+	 * - Soma_Config_Admin. Defines all hooks for the dashboard.
+	 * - Soma_Config_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -100,33 +100,33 @@ class Soma_Setup {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-soma-setup-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-soma-config-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-soma-setup-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-soma-config-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the Dashboard.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-soma-setup-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-soma-config-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-soma-setup-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-soma-config-public.php';
 
-		$this->loader = new Soma_Setup_Loader();
+		$this->loader = new Soma_Config_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Soma_Setup_i18n class in order to set the domain and to register the hook
+	 * Uses the Soma_Config_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -134,7 +134,7 @@ class Soma_Setup {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Soma_Setup_i18n();
+		$plugin_i18n = new Soma_Config_i18n();
 		$plugin_i18n->set_domain( $this->get_plugin_name() );
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
@@ -150,7 +150,7 @@ class Soma_Setup {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Soma_Setup_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new Soma_Config_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -166,7 +166,7 @@ class Soma_Setup {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Soma_Setup_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new Soma_Config_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -197,7 +197,7 @@ class Soma_Setup {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Soma_Setup_Loader    Orchestrates the hooks of the plugin.
+	 * @return    Soma_Config_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

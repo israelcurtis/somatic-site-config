@@ -9,8 +9,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Soma_Setup
- * @subpackage Soma_Setup/includes
+ * @package    Soma_Config
+ * @subpackage Soma_Config/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Soma_Setup
- * @subpackage Soma_Setup/includes
+ * @package    Soma_Config
+ * @subpackage Soma_Config/includes
  * @author     Your Name <email@example.com>
  */
-class Soma_Setup_i18n {
+class Soma_Config_i18n {
 
 	/**
 	 * The domain specified for this plugin.

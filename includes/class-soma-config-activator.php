@@ -6,8 +6,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Soma_Setup
- * @subpackage Soma_Setup/includes
+ * @package    Soma_Config
+ * @subpackage Soma_Config/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's activation.
  *
  * @since      1.0.0
- * @package    Soma_Setup
- * @subpackage Soma_Setup/includes
+ * @package    Soma_Config
+ * @subpackage Soma_Config/includes
  * @author     Your Name <email@example.com>
  */
-class Soma_Setup_Activator {
+class Soma_Config_Activator {
 
 	/**
 	 * Short Description. (use period)

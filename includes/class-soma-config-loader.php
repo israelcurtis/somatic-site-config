@@ -6,8 +6,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Soma_Setup
- * @subpackage Soma_Setup/includes
+ * @package    Soma_Config
+ * @subpackage Soma_Config/includes
  */
 
 /**
@@ -17,11 +17,11 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    Soma_Setup
- * @subpackage Soma_Setup/includes
+ * @package    Soma_Config
+ * @subpackage Soma_Config/includes
  * @author     Your Name <email@example.com>
  */
-class Soma_Setup_Loader {
+class Soma_Config_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.
