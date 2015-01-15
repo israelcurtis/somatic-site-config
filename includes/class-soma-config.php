@@ -68,7 +68,7 @@ class Soma_Config {
 	 */
 	public function __construct() {
 
-		$this->plugin_name = 'somatic-framework-setup';
+		$this->plugin_name = 'somatic-site-config';
 		$this->version = '1.0.0';
 
 		$this->load_dependencies();
